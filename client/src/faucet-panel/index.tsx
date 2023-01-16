@@ -16,7 +16,7 @@ class FaucetPanel extends React.Component<{}, { inputAddress: string }> {
     });
 
     if (!response.ok) {
-      toast.error('BTL ETH request fail. Please try again!', {
+      toast.error('Testnet ETH request fail. Please try again!', {
         position: 'bottom-center',
         autoClose: 3000,
         hideProgressBar: false,
@@ -61,26 +61,21 @@ class FaucetPanel extends React.Component<{}, { inputAddress: string }> {
   render(): JSX.Element {
     return (
       <div className="faucetPanel">
-        <h1>BTL Testnet Faucet</h1>
+        <h1>Testnet Faucet</h1>
 
         <div style={{ marginBottom: '30px' }}>
           <input
             className="formControl"
             type="text"
             onChange={this.handleInputOnChange}
-            placeholder="Your BTL testnet address"></input>
+            placeholder="Your testnet address"></input>
         </div>
 
         <div className="panelButton" onClick={this.handleOnClick}>
-          Give me BTL ETH!
+          Give me testnet ETH!
         </div>
 
-        <p>Please enter valid Ethereum address to get free BTL Testnet ETH.</p>
-        <p>
-          <a href="https://github.com/Blockchain-Technology-Lab/bdl-course" target="_blank" rel="noopener noreferrer">
-            BDL Github
-          </a>
-        </p>
+        <p>Please enter valid Ethereum address to get free Testnet ETH.</p>
         <ToastContainer />
       </div>
     );

@@ -117,7 +117,7 @@ app.post('/faucet', async (request: Request, response: Response) => {
   if (!ipAddress)
     return response.status(200).json({
       status: false,
-      message: 'BTL ETH request fail. Please try again!',
+      message: 'Testnet ETH request fail. Please try again!',
     });
   ipAddress = ipAddress.replace(/\./g, '_');
 
@@ -126,7 +126,7 @@ app.post('/faucet', async (request: Request, response: Response) => {
     const waitTime: number = blockList.getTtl(ipAddress) - Date.now();
     return response.status(200).json({
       status: false,
-      message: `Your ip address has already requested BTL_ETH today :) The remaining time for next request is ${msToTime(
+      message: `Your ip address has already requested testnet ETH today :) The remaining time for next request is ${msToTime(
         waitTime
       )}`,
     });
@@ -137,7 +137,7 @@ app.post('/faucet', async (request: Request, response: Response) => {
     const waitTime: number = blockList.getTtl(toAddress) - Date.now();
     return response.status(200).json({
       status: false,
-      message: `Your wallet address has already requested BTL_ETH today :) The remaining time for next request is ${msToTime(
+      message: `Your wallet address has already requested testnet ETH today :) The remaining time for next request is ${msToTime(
         waitTime
       )}.`,
     });
@@ -157,7 +157,7 @@ app.post('/faucet', async (request: Request, response: Response) => {
 
   return response
     .status(200)
-    .json({ status: true, message: `BTL_ETH request added to the queue (${prevTx} tasks remaining). Enjoy!` });
+    .json({ status: true, message: `Testnet ETH request added to the queue (${prevTx} tasks remaining). Enjoy!` });
 });
 
 app.get('*', async (_request: Request, response: Response) => {

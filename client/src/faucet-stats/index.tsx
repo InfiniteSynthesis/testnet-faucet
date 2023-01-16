@@ -107,13 +107,13 @@ class FaucetStats extends React.Component<
     ) : undefined;
     const balanceInfo = this.state.balance ? (
       <p>
-        <span className="highlightSpan">{this.state.balance}</span> BTL_ETH available
+        <span className="highlightSpan">{this.state.balance}</span> Testnet ETH available
       </p>
     ) : undefined;
     const dailyLimitInfo =
       this.state.dailyLimit !== -1 ? (
         <p>
-          <span className="highlightSpan">{this.state.dailyLimit}</span> BTL_ETH daily limit per address
+          <span className="highlightSpan">{this.state.dailyLimit}</span> Testnet ETH daily limit per address
         </p>
       ) : undefined;
     const blockNumberInfo =

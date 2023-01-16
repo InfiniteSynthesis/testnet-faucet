@@ -34,6 +34,8 @@ This can be done by, e.g., calling `web3.eth.accounts.create`, encrypting it wit
 
 ### Step 2: Build client.
 
+You can customize the name of your testnet in the `faucet-panel` component.
+
 ```shell
 cd client 
 npm install
