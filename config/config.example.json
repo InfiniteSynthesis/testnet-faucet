@@ -1,0 +1,6 @@
+{
+    "rpcURL": "http://12.34.56.78:90",
+    "payoutFrequency": 10,
+    "dailyLimit": 10,
+    "serverPort": 8000
+}
